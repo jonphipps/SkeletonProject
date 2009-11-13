@@ -6,10 +6,15 @@ if ( ! isset($argv[1])) {
 }
 
 $projectName = $argv[1];
+$callback = function($matches) {
+    return $matches[1] . strtoupper($matches[3]);
+};
+$projectName = str_replace(' ', '_', $projectName);
+$projectName = preg_replace('/[$]/', '', $projectName);
+$projectName = preg_replace_callback('~(_?)(_)([\w])~', $callback, ucfirst($projectName));
 
 exec('cp -R ' . __DIR__ . '/* .');
 exec(sprintf("find ./* -type f | xargs perl -pi -e 's/SkeletonProject/%s/g'", $projectName));
 exec('rm copy');
 exec(sprintf('mv lib/SkeletonProject lib/%s', $projectName));
-exec(sprintf('mv tests/SkeletonProject/Tests/SkeletonProject tests/SkeletonProject/Tests/%s', $projectName));
 exec(sprintf('mv tests/SkeletonProject tests/%s', $projectName));
