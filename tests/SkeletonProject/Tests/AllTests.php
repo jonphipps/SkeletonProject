@@ -19,7 +19,7 @@ class AllTests
     {
         $suite = new \PHPUnit_Framework_TestSuite('SkeletonProject Tests');
 
-        $suite->addTest(SkeletonProject\AllTests::suite());
+        $suite->addTestSuite('SkeletonProject\Tests\SampleTest');
 
         return $suite;
     }
