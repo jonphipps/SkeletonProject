@@ -48,4 +48,4 @@ Now you can use the classes and they will be loaded:
 
 The class will be loaded automatically by the above class loader from:
 
-    MyNewProject\lib/MyNewProject\TestClass.php
+    MyNewProject/lib/MyNewProject/TestClass.php
