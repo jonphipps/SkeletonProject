@@ -1,8 +1,10 @@
 # Skelton PHP 5.3 Git Project
 
-You can copy this project by simply running the `copy` shell script
-from the command line inside the directory where you want to copy the
-skeleton to.
+This is a skeleton PHP project. Think of it like a framework for writing PHP
+libraries. It comes ready to go with a PHP 5.3 class loader and PHPUnit for 
+unit testing your library. You can copy this project by simply running the 
+`copy` shell script from the command line inside the directory where you want 
+to copy the skeleton to.
 
 Here is an example:
 

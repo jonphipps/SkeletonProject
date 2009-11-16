@@ -18,3 +18,6 @@ exec(sprintf("find ./* -type f | xargs perl -pi -e 's/SkeletonProject/%s/g'", $p
 exec('rm copy');
 exec(sprintf('mv lib/SkeletonProject lib/%s', $projectName));
 exec(sprintf('mv tests/SkeletonProject tests/%s', $projectName));
+exec('cat <<EOF > README.markdown
+# '.$projectName.'
+EOF');
