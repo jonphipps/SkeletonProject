@@ -14,6 +14,7 @@ namespace SkeletonProject;
  *     $classLoader->register();
  *
  * @package SkeletonProject
+ * @author Jonathan N. Phipps <jonphipps@gmail.com>
  * @author Jonathan H. Wage <jonwage@gmail.com>
  * @author Roman S. Borschel <roman@code-factory.org>
  * @author Matthew Weier O'Phinney <matthew@zend.com>
